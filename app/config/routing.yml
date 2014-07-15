@@ -1,0 +1,5 @@
+sym_corp:
+    resource: "@SymCorpBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

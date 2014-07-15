@@ -1,0 +1,31 @@
+{# src/Sym/CorpBundle/Resources/views/Default/search.html.twig #}
+{% extends 'SymCorpBundle::layout.html.twig' %}
+
+{% block body %}
+    {% block navbar %}
+        {{ parent() }}
+    {% endblock %}
+
+    <div class="row">
+
+        <div class="large-9 columns" role="content">
+            <article>
+                <h3>Search Results</h3>
+                <div class="row">
+                    <div class="large-12 columns">
+                        {% autoescape false %}
+                            {% for post in posts %}
+                                <p>{{ post.title }}</p>
+                                <p>{{ post.body1 }}</p><hr>
+                            {% endfor %}
+                        {% endautoescape %}
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

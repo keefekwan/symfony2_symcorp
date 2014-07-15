@@ -1,0 +1,168 @@
+{# src/Sym/CorpBundle/Resources/views/layout.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {% block navbar %}
+    <div class="row">
+        <div class="large-12 columns">
+
+            <nav class="top-bar" data-topbar>
+                <ul class="title-area">
+
+                    <li class="name">
+                        <h1>
+                            <a href="{{ path('sym_corp_index') }}">SymCorp</a>
+                        </h1>
+                    </li>
+                    <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="left">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                    </ul>
+
+                    <ul class="right">
+                        <form action="{{ path('sym_corp_search') }}" method="GET">
+                            <li class="search">
+                                <label><input type="search" name="q" value="{{ app.request.query.get('q') }}" /></label>
+                            </li>
+                            <li class="has-button">
+                                <input type="submit" value="Search"  class="small button" />
+                            </li>
+                        </form>
+                    </ul>
+                </section>
+            </nav>
+        <hr>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block carousel %}
+    <div class="row">
+        <div class="large-12 columns">
+            {#<div class="hide-for-small">#}
+            <div id="featured">
+                <div class="your-class">
+                    <div><img src="http://placehold.it/1000x800&text=Slide Image" alt="slide image"></div>
+                    <div><img src="http://placehold.it/1000x800&text=Slide Image" alt="slide image"></div>
+                    <div><img src="http://placehold.it/1000x800&text=Slide Image" alt="slide image"></div>
+                    <div><img src="http://placehold.it/1000x800&text=Slide Image" alt="slide image"></div>
+                    <div><img src="http://placehold.it/1000x800&text=Slide Image" alt="slide image"></div>
+                </div>
+            </div>
+            {#</div>#}
+
+            <div class="row">
+                <div class="small-12 show-for-small"><br>
+                    <img src="http://placehold.it/1000x600&text=For Small Screens"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block info %}
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="row">
+
+                <div class="large-3 small-6 columns">
+                    <a href="{{ path('sym_corp_about') }}"><img src="http://placehold.it/250x250&text=Thumbnail"/></a>
+                    <h6 class="panel"><a href="{{ path('sym_corp_about') }}">About</a></h6>
+                </div>
+
+                <div class="large-3 small-6 columns">
+                    <a href="{{ path('sym_corp_history') }}"><img src="http://placehold.it/250x250&text=Thumbnail"/></a>
+                    <h6 class="panel"><a href="{{ path('sym_corp_history') }}">Our History</a></h6>
+                </div>
+
+                <div class="large-3 small-6 columns">
+                    <a href="{{ path('sym_corp_team') }}"><img src="http://placehold.it/250x250&text=Thumbnail"/></a>
+                    <h6 class="panel"><a href="{{ path('sym_corp_team') }}">Our Team</a></h6>
+                </div>
+
+                <div class="large-3 small-6 columns">
+                    <a href="{{ path('sym_corp_joinus') }}"><img src="http://placehold.it/250x250&text=Thumbnail"/></a>
+                    <h6 class="panel"><a href="{{ path('sym_corp_joinus') }}">Join Us!</a></h6>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="row">
+
+                <div class="large-8 columns">
+                    <div class="panel radius">
+
+                        <div class="row">
+                            <div class="large-6 small-6 columns">
+
+                                <h4>SymCorp</h4><hr/>
+                                <h5 class="subheader">Established in 1887. Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.</h5>
+
+                                <div class="show-for-small" align="center">
+                                    <a href="#" class="small radius button">Call To Action!</a><br>
+
+                                    <a href="#" class="small radius button">Call To Action!</a>
+                                </div>
+
+                            </div>
+                            <div class="large-6 small-6 columns">
+
+                                <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="large-4 columns hide-for-small">
+
+                    <h4>Contact Us!</h4><hr/>
+
+                    <a class="large button expand" href="#">
+                        Call To Action!
+                    </a>
+
+                    <a class="large button expand" href="#">
+                        Call To Action!
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block footer %}
+    <footer class="row">
+        <div class="large-12 columns">
+            <hr>
+            <div class="row">
+                <div class="large-6 columns">
+                    <p>© Copyright no one at all. Go to town.</p>
+                </div>
+                <div class="large-6 columns">
+                    <ul class="inline-list right">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+
+{% endblock %}

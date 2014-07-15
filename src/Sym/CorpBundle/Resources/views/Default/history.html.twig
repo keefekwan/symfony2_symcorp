@@ -1,0 +1,35 @@
+{# src/Sym/CorpBundle/Resources/views/history.html.twig #}
+{% extends 'SymCorpBundle::layout.html.twig' %}
+
+{% block body %}
+
+    {% block navbar %}
+        {{ parent() }}
+    {% endblock %}
+
+    <div class="row">
+
+        <div class="large-9 columns" role="content">
+            <article>
+                <h3>Our History</h3>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <img src="http://placehold.it/400x240&text=[img]"/>
+                    </div>
+                    <div class="large-6 columns">
+                        {% autoescape false %}
+                        <p>{{ post.body1 }}</p>
+                        {% endautoescape %}
+                    </div>
+                    {% autoescape false %}
+                    <p>{{ post.body2 }}</p>
+                    {% endautoescape %}
+                </div>
+            </article>
+        </div>
+    </div>
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}
+

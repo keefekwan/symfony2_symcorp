@@ -1,0 +1,29 @@
+{# src/Sym/CorpBundle/Resources/views/Form/fields.html.twig #}
+
+{% block form_widget_simple %}
+<div class="row collapse">
+    <div class="large-10 columns">
+        {% spaceless %}
+            {% set type = type|default('text') %}
+            <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+        {% endspaceless %}
+    </div>
+</div>
+{% endblock form_widget_simple %}
+
+{% block email_widget %}
+<div class="row collapse">
+    <div class="large-10 columns">
+        {% spaceless %}
+            {% set type = type|default('text') %}
+            <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+        {% endspaceless %}
+    </div>
+</div>
+{% endblock email_widget %}
+
+{% block textarea_widget %}
+    {% spaceless %}
+        <textarea rows="12" {{ block('widget_attributes') }}>{{ value }}</textarea>
+    {% endspaceless %}
+{% endblock textarea_widget %}
