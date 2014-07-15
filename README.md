@@ -1,3 +1,14 @@
+SymCorp Company site
+========================
+Built from the ground up in Symfony2. Featuring the following:
+
+- Zurb Foundation for the layout templates
+- Slick carousel for the front page
+- About, Our History, Our Team and Join Us! pages/sections
+- Functioning search functionality setup as a service
+- Entities/Repositories/Controller/Twig templates are setup for use
+- Web app is fully functioning to be extended or changed or what have you
+
 Symfony Standard Edition
 ========================
 
